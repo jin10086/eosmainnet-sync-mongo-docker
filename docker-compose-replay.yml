@@ -11,7 +11,7 @@ services:
 
   nodeosd:
     image: eosio/eos:latest
-    command: /opt/eosio/bin/nodeos --delete-all-blocks
+    command: /opt/eosio/bin/nodeos
     hostname: nodeosd
     ports:
       - 8888:8888
