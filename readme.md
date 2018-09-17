@@ -23,4 +23,11 @@
 
 默认是在主机 27018端口,有需要的话，可以自行修改.
 
+## 查看log
+
+查看nodeos log
+`docker logs -f eosmainnet-sync-mongo-docker_nodeosd_1`
+
+查看 mongo log
+`docker logs -f eosmainnet-sync-mongo-docker_nodeosd_1`
 
