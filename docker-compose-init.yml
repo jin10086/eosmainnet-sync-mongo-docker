@@ -11,7 +11,7 @@ services:
 
   nodeosd:
     image: eosio/eos:latest
-    command: /opt/eosio/bin/nodeos --delete-all-blocks
+    command: /opt/eosio/bin/nodeos --config-dir=/opt/eosio/bin/data-dir/config --genesis-json=/opt/eosio/bin/data-dir/config/genesis.json --data-dir=/opt/eosio/bin/data-dir
     hostname: nodeosd
     ports:
       - 8888:8888

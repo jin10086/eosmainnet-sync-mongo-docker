@@ -10,12 +10,15 @@
 
 ## 如何使用
 
-### 第一次的话(会删除之前的所有区块)
+### 第一次的话
 `docker-compose -f docker-compose-init.yml up -d`
 
 ### 除了第一次以外
 
-`docker-compose -f docker-compose-replay.yml up -d`
+`docker-compose up -d`
+
+如果中断了，则直接使用 `docker-compose start`
+想暂停的话 `docker-compose stop`
 
 ### 如果想重新同步的话，就按照第一次的操作
 
