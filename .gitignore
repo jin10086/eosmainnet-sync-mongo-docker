@@ -7,5 +7,5 @@
 # End of https://www.gitignore.io/api/docker
 contracts
 datadir
-blocks
+blocks*
 state

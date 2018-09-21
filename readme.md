@@ -18,7 +18,18 @@
 `docker-compose up -d`
 
 如果中断了，则直接使用 `docker-compose start`
+
 想暂停的话 `docker-compose stop`
+
+### 报错 `generic server error`
+
+再试一次同样的命令就可以了
+
+### 报错 `database dirty flag set (likely due to unclean shutdown): replay required`
+
+执行 `docker-compose -f docker-compose-replay.yml up -d`就可以了
+
+一般出现这种情况都是docker意外关闭导致的，所以关闭docker最好使用 `docker-compose stop`
 
 ### 如果想重新同步的话，就按照第一次的操作
 

@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo
+    hostname: mongo
+    ports:
+      - 27018:27017
+    volumes:
+      - ./mongodata/datadir:/data/db
+
+  nodeosd:
+    image: eosio/eos:latest
+    command: /opt/eosio/bin/nodeos --config-dir=/opt/eosio/bin/data-dir/config  --data-dir=/opt/eosio/bin/data-dir --replay-blockchain --hard-replay-blockchain
+    hostname: nodeosd
+    ports:
+      - 8888:8888
+      - 9876:9876
+    expose:
+      - "8888"
+    volumes:
+      - ./eosdata:/opt/eosio/bin/data-dir
+    links:
+      - mongo
+    cap_add:
+      - IPC_LOCK
+    stop_grace_period: 10m
